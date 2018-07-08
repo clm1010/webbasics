@@ -1,0 +1,26 @@
+CSS盒模型
+一、标准模型+IE模型区别
+什么是盒模型：盒模型又称框模型（Box Model）,包含了元素内容（content）、内边距（padding）、边框（border）、外边距（margin）
+区别：IE模型和标准模型唯一区别是计算方式不同。
+IE模型宽度和高度
+width=content+padding+border
+height=content+padding+border
+
+标准模型宽度和高度
+width=content的宽度
+height=content的高度
+
+二、CSS如何设置这两种模型
+box-sizing:content-box;（指定是标准模型）
+box-sizing:border-box;（指定是IE模型）
+浏览器默认box-sizing:content-box;
+
+三、JS如何设置获取盒模型对应的宽和高
+1. dom.style.width/height 只能取到行内样式的宽和高，style标签中和link外链的样式取不到。
+2. dom.currentStyle.width/height 取到的是最终渲染后的宽和高，只有IE支持此属性。
+3. window.getComputedStyle(dom).width/height 同（2）但是多浏览器支持，IE9以上支持。
+4. dom.getBoundingClientRect().width/height 也是得到渲染后的宽和高，大多浏览器支持。IE9以上支持，除此外还可以取到相对于视窗的上下左右的距离
+
+四、根据盒模型解释边距重叠
+
+五、BFC边距重叠解决方案
