@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>页面布局（一）</title>
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    h2,h3,h4,h5,h6{
+      font-size: 16px;
+    }
+    section {
+      margin: 10px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>页面布局方式</h1>
+  <!-- float三栏布 start-->
+  <style type="text/css">
+  .layout-sec-float div {min-height: 100px;}
+  .layout-sec-float .float-left,
+  .layout-sec-float .float-right {width: 300px;background-color: red;}
+  .layout-sec-float .float-left {float: left;}
+  .layout-sec-float .float-right {float: right;}
+  .layout-sec-float .float-center {background-color: yellow;}
+  </style>
+  <section class="layout-sec-float">
+    <div class="float-left"></div>
+    <div class="float-right"></div>
+    <div class="float-center"><h2>float三栏布局这个中间内容必须放到最后面</h2></div>
+  </section>
+  <!-- float三栏布 end-->
+  <!-- position三栏布 start-->
+  <style type="text/css">
+  .layout-sec-position {position: relative;}
+  .layout-sec-position div {position: absolute;min-height: 100px;}
+  .layout-sec-position .left,
+  .layout-sec-position .right {width: 300px;background-color: red;}
+  .layout-sec-position .left {left:0;}
+  .layout-sec-position .right {right:0;}
+  .layout-sec-position .center {left:300px;right:300px;background-color: yellow;}
+  </style>
+  <section class="layout-sec-position">
+    <div class="left"></div>
+    <div class="center"><h3>position三栏布局</h3></div>
+    <div class="right"></div>
+  </section>
+  <!-- position三栏布 end-->
+
+  <!-- display:flex三栏布 start-->
+  <style type="text/css">
+  .layout-sec-flex {display: flex;margin-top: 120px;}
+  .layout-sec-flex div{min-height: 100px;}
+  .layout-sec-flex .left,
+  .layout-sec-flex .right {width: 300px;background-color: red;}
+  .layout-sec-flex .center {background-color: yellow;flex: 1;}
+  </style>
+  <section class="layout-sec-flex">
+    <div class="left"></div>
+    <div class="center"><h4>display:flex三栏布局</h4></div>
+    <div class="right"></div>
+  </section>
+  <!-- display:flex三栏布 end-->
+
+  <!-- display:table三栏布 start-->
+  <style type="text/css">
+  .layout-sec-table {width: 100%;display: table;min-height: 100px;}
+  .layout-sec-table div{display:table-cell;}
+  .layout-sec-table .left,
+  .layout-sec-table .right {width: 300px;background-color: red;}
+  .layout-sec-table .center {background-color: yellow;}
+  </style>
+  <section class="layout-sec-table">
+    <div class="left"></div>
+    <div class="center"><h4>display:table三栏布局</h4></div>
+    <div class="right"></div>
+  </section>
+  <!-- display:table三栏布 end-->
+
+  <!-- display:table三栏布 start-->
+  <style type="text/css">
+  .layout-sec-grid {width: 100%;display: grid;grid-template-rows: 100px;grid-template-columns: 300px auto 300px;}
+  .layout-sec-grid .left,
+  .layout-sec-grid .right {background-color: red;}
+  .layout-sec-grid .center {background-color: yellow;}
+  </style>
+  <section class="layout-sec-grid">
+    <div class="left"></div>
+    <div class="center"><h5>display:grid三栏布局</h5></div>
+    <div class="right"></div>
+  </section>
+  <!-- display:table三栏布 end-->
+</body>
+
+</html>
