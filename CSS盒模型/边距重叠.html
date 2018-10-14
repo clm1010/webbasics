@@ -5,15 +5,20 @@
   <meta charset="utf-8">
   <title>边距重叠</title>
   <style type="text/css">
-    *{margin: 0;padding: 0}
-    .sec{
-      background-color:#FF0000;
-      /* 创建BFC */
-      overflow:hidden;
+    * {
+      margin: 0;
+      padding: 0
     }
-    .child{
+
+    .sec {
+      background-color: #FF0000;
+      /* 创建BFC */
+      overflow: hidden;
+    }
+
+    .child {
       height: 100px;
-      margin-top:10px;
+      margin-top: 10px;
       background-color: yellow;
     }
   </style>
@@ -27,11 +32,12 @@
   <!-- 兄弟元素边距重叠 BFC垂直方向边距重叠 -->
   <section class="margin">
     <style media="screen">
-      .margin{
+      .margin {
         background-color: pink;
         overflow: hidden;
       }
-      .margin > p{
+
+      .margin>p {
         margin: 5px auto 25px;
         background-color: red;
       }
@@ -47,16 +53,18 @@
   <!-- BFC不与float重叠 -->
   <section class="layout">
     <style media="screen">
-      .layout{
+      .layout {
         background-color: red;
       }
-      .layout .left{
+
+      .layout .left {
         float: left;
         width: 100px;
         height: 100px;
         background-color: green;
       }
-      .layout .right{
+
+      .layout .right {
         height: 110px;
         background-color: #CCC;
         overflow: auto;
@@ -69,13 +77,14 @@
   <!--  -->
   <section id="float">
     <style media="screen">
-      #float{
+      #float {
         background-color: blue;
         /* 创建BFC 父级元素的高度也会参与子元素高度计算 */
         overflow: auto;
       }
-      #float .float{
-        float:left;
+
+      #float .float {
+        float: left;
         font-size: 30px;
       }
     </style>
