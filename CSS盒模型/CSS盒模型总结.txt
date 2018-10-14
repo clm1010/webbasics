@@ -22,5 +22,19 @@ box-sizing:border-box;（指定是IE模型）
 4. dom.getBoundingClientRect().width/height 也是得到渲染后的宽和高，大多浏览器支持。IE9以上支持，除此外还可以取到相对于视窗的上下左右的距离
 
 四、根据盒模型解释边距重叠
+1、父子元素边距重叠
+2、兄弟元素边距重叠（重叠部分会取最大值）
 
 五、BFC边距重叠解决方案
+BFC的概念：块级格式化上下文
+BFC的原理
+1.BFC元素垂直方向的边距会发生重叠
+2.BFC的区域不会与浮动元素的box重叠
+3.BFC在页面上是一个独立的容器，外面的元素不会影响里面的元素，里面的元素也不会影响外面的元素
+4.计算BFC高度时，浮动元素也会参与计算
+
+六、如何创建BFC？
+1.float值不为none
+2.position不是static或relative
+3.display是table相关的
+4.overflow不是visible
