@@ -1,0 +1,23 @@
+MVVM框架
+一、了解MVVM框架吗？
+Vue.js React.js Angular.js
+
+二、对MVVM的认识？
+M -> Model
+V -> View
+VM -> ViewModel
+
+Model <——> ViewModel <——> View
+Model 可以理解成服务器业务某一块操作
+ViewModel 就是我们看到的这个Vue框架，它处理的就是View和Model核心枢纽。
+View 就是看到的页面展现形态
+
+三、双向绑定的原理
+1、双向
+view -> data 反向
+data -> view 正向（数据驱动页面）
+
+2、绑定
+之前传统手工做法例如：绑定input事件在事件响应中写程序获取变量然后在赋值给data。
+
+现在的MVVM自动化处理
